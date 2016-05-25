@@ -1,0 +1,11 @@
+[Unit]
+Description=My Service
+After=network.target
+
+[Service]
+ExecStart=/home/pi/.nvm/versions/node/v4.4.5/bin/node /home/pi/project_folder/script_name.ext
+Restart=always
+WorkingDirectory=/home/pi/project_folder
+
+[Install]
+WantedBy=multi-user.target
